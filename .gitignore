@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -146,3 +147,6 @@ cython_debug/
 # Podman/Docker
 *.tar
 *.img
+=======
+.ipynb
+>>>>>>> 4a803499f20c7b54c8c82530795a48bba433ba28
