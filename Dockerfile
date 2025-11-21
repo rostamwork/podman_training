@@ -11,11 +11,11 @@ COPY pyproject.toml uv.lock ./
 # Regenerate the uv.lock file to ensure compatibility
 RUN uv lock
 
-# Install dependencies using uv sync
-RUN uv sync --frozen
+# Install dependencies directly to system Python
+RUN uv pip install --system --compile-bytecode -r pyproject.toml
 
 # Copy application files
 COPY src/ ./src/
 
 # Default command to run the application
-CMD [ "python", "src/app.py" ]
+CMD [ "python", "src/main.py" ]
